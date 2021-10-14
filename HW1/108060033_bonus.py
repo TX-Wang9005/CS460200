@@ -35,9 +35,8 @@ def SplitData():
     for i, sublist in enumerate(input_datalist):
         if "0" in sublist:
             break
-    print(i)
     train, valid = np.split(input_datalist, [i])
-    return train, valid, i
+    return train, valid
 
 
 def PreprocessData():
@@ -48,7 +47,7 @@ def PreprocessData():
     return x_datalist
 
 
-training_data, validation_data, idx_sp = SplitData()
+training_data, validation_data = SplitData()
 x_datalist = PreprocessData()
 ar_model = AutoReg(x_datalist, lags=20).fit()           # Use ar_model
 pred = ar_model.predict(start=len(training_data), end=(   # Predict

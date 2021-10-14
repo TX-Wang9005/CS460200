@@ -14,7 +14,7 @@ import random
 # Do not change anything here except TODO 1
 StudentID = '108060033'  # TODO 1 : Fill your student ID here
 # Please name your input csv file as 'input.csv'
-input_dataroot = 'sample_input.csv'
+input_dataroot = 'basic_input.csv'
 # Output file will be named as '[StudentID]_basic_prediction.csv'
 output_dataroot = StudentID + '_basic_prediction.csv'
 input_datalist = []  # Initial datalist, saved as numpy array
